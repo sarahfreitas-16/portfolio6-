@@ -1,0 +1,525 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root{
+    --preto:rgba(26, 26, 26, 1);
+    --branco:rgba(255, 255, 255, 1);
+    --roxo:#8338EC;
+    --verdeClaro:rgba(195, 254, 76, 1);
+    --verdeEscuro:rgba(174, 217, 0, 1);
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .ola, .sarah {
+        font-size: 4rem; /* Reduz fonte para móveis */
+        margin-left: 5%;
+    }
+    .mini-texto {
+        font-size: 1.5rem;
+        margin-left: 5%;
+    }
+    .botaoTexto, .botaoTexto1 {
+        font-size: 20px; /* Ajusta botões */
+        margin-left: 2%;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* Grid de 2 colunas em móveis */
+    }
+    .projects-grid {
+        grid-template-columns: 1fr; /* Coluna única para projetos */
+    }
+    .sobre-box {
+        flex-direction: column; /* Empilha elementos verticalmente */
+    }
+    .contact form {
+        max-width: 90%; /* Ajusta largura do formulário */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .ola, .Sarah {
+        font-size: 5rem; /* Tamanho intermediário para tablets */
+    }
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    }
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* Mantém 2 colunas */
+    }
+}
+
+@media (min-width: 1025px) {
+    /* Mantém o layout original, com ajustes leves se necessário */
+    .skills-grid {
+        grid-template-columns: repeat(5, 1fr); /* Garante 5 colunas em desktops grandes */
+    }
+}
+
+/* href="caminho/para/seu/arquivo.pdf" download="meu_arquivo.pdf" */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kdam Thmor Pro', sans-serif; /* Kdam Thmor Pro como família principal */
+    background-color: var(--branco);
+}
+
+.kdam-thmor-pro-regular {
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+/* ----------------------------------- secao topo do site ---------------------------------------------*/
+/* Estilos para Modo Escuro */
+body.dark-mode { font-family: "Kdam Thmor Pro", sans-serif;
+    --preto: rgba(255, 255, 255, 1); /* Inverte cores */
+    --branco: rgba(26, 26, 26, 1);
+    --roxo:#8338EC;
+    --verdeClaro: rgba(195, 254, 76, 1);
+    --verdeEscuro:rgba(174, 217, 0, 1);
+}
+
+body.dark-mode .mini-texto{
+    font-family: "Kdam Thmor Pro", sans-serif;
+    color: white;
+}
+
+body.dark-mode .sobre-text, body.dark-mode .contact h2 {
+    font-family: "Kdam Thmor Pro", sans-serif;
+    color: var(--branco);
+}
+
+body.dark-mode .skill-item {
+    font-family: "Kdam Thmor Pro", sans-serif;
+    border-color: var(--verdeEscuro);
+}
+
+body.dark-mode .contact input, body.dark-mode .contact textarea {
+    font-family: "Kdam Thmor Pro", sans-serif;
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+body.dark-mode .sobre-text{
+    font-family: "Kdam Thmor Pro", sans-serif;
+    color: var(--branco);
+}
+
+.botaoTexto { 
+    position: fixed;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    margin-top: 2%;
+    position: relative;
+    margin-left: 12%;
+    text-decoration: none;
+    font-size: 35px;
+}
+
+.botaoTexto1{
+    margin-left: 4%;
+    position: relative;
+    text-decoration: none;
+    font-size: 35px;
+}
+
+.barra{
+    margin-top: 2%;
+    position: relative;
+    margin-left: 2%;
+    text-decoration: none;
+    font-size: 35px;
+    margin-top: 5%; 
+}
+
+.download-btn {
+    position: absolute;
+    margin-top: 1%;
+    margin-left: -24%;
+    background: var(--verdeEscuro);
+    border: none; padding: 20px; 
+    border-radius: 5px; cursor: pointer; 
+    font-size: 1rem; font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.download-btn:hover {
+    background-color:var(--verdeEscuro); /* Cor de fundo ao passar o mouse */
+}
+  
+.divisor{
+    position: relative;
+    margin-left: 5%;
+    align-items: center;
+    margin-top: 1.3%;
+    background-color: var(--verdeEscuro);
+    width: 90%; /* largura */
+    height: 5px;
+    border-radius: 8px;
+}
+
+#cabecario{
+    background-color: transparent;
+    margin-left: 4.5%;
+    align-items: center;
+    margin-top: 1%;
+    width: 90%; /* largura */
+    height: 10px;
+    border-radius: 8px;
+}
+
+/* -------------------------------------  secao texto ola -------------------------------------*/
+
+.divisor-em-pe{
+    background-color: var(--verdeEscuro);
+    width: 12px;
+    height: 45vh;
+    margin-top: 10%;
+    margin-left: 10%;
+    border-radius: 8px;
+}
+
+.ola{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 7rem;
+    margin-left: 15%;
+    margin-top: -25%;
+}
+
+.sarah{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 7rem;
+    margin-left: 15%;
+    margin-top: -3%; 
+}
+
+.mini-texto{
+    color: var var(--roxo);
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 2rem;
+    margin-left: 15%;
+    
+}
+
+.linkedin{
+    position: relative;
+    margin-left: 17%;
+    margin-top: 2%;
+    text-decoration: none;
+}
+
+.destaque-linkedin{
+    position: absolute;
+    margin-right: 7%;
+    background-color: var(--verdeEscuro);
+    width: 3%; /* largura */
+    height: 5px;
+    border-radius: 8px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root{
+    --preto:rgba(26, 26, 26, 1);
+    --branco:rgba(255, 255, 255, 1);
+    --roxo:#8338EC;
+    --verdeClaro:rgba(195, 254, 76, 1);
+    --verdeEscuro:rgba(174, 217, 0, 1);
+}
+
+
+/* ---------------------- MODO ESCURO ---------------------- */
+body.dark-mode { 
+    --preto: rgba(255, 255, 255, 1);
+    --branco: rgba(26, 26, 26, 1);
+    --roxo:#8338EC;
+    --verdeClaro: rgba(195, 254, 76, 1);
+    --verdeEscuro:rgba(174, 217, 0, 1);
+}
+
+/* ---------------------- SOBRE MIM ---------------------- */
+#sobre-mim {
+    text-align: center;
+    margin: 4rem 0 2rem;
+}
+
+#titulo-SobreMim h1 {
+    color: var(--verdeEscuro);
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.sobre {
+    background-color: var(--roxo);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.sobre-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sobre-text {
+    color: var(--branco);
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    max-width: 500px;
+}
+
+.profile-pic {
+    background-image: url(MinhaFoto.png);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--verdeClaro);
+    background-size: cover;
+    background-position: center;
+}
+
+/* ---------------------- SKILLS ---------------------- */
+#minhas-skills {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+#titulo-SobreMim-habilidades h1 {
+    color: var(--verdeEscuro);
+    font-size: clamp(3rem, 3rem, 3rem);
+}
+
+.skills {
+  padding: 60px 20px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Grid responsivo */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Itens individuais */
+.skill-item {
+  position: relative;
+  background-color: var(--roxo);
+  border: 2px solid var(--verdeEscuro);
+  border-radius: 10px;
+  padding: 30px 10px;
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.skill-item p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--verdeEscuro);
+  margin: 0;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  background-color: var(--roxo);
+}
+
+/* Tooltip */
+.skill-item::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent-color);
+  color: #000;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.skill-item:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* Tema escuro (padrão) */
+:root {
+  --bg-item: rgba(255, 255, 255, 0.05);
+  --border-color: --verdeEscuro;
+  --accent-color: rgba(174, 217, 0, 1);
+  --bg-hover:rgba(174, 217, 0, 1);
+  background-color: #0a0a0a;
+  color: #fff;
+}
+
+/* Tema claro */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-item: #f5f5f5;
+    --border-color: var(--verdeEscuro)
+    --accent-color: #6a8000;
+    --bg-hover: var(--verdeEscuro)
+    background-color: #ffffff;
+    color: var(--roxo);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .skill-item {
+    padding: 25px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+  .skill-item p {
+    font-size: 1rem;
+  }
+}
+
+/* ---------------------- PROJETOS ---------------------- */
+.frundo-projetos {
+    background-color: var(--verdeClaro);
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+#titulo-projetos h1 {
+    color: var(--roxo);
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 2rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.projects-grid img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.projects-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* ---------------------- CONTATO ---------------------- */
+.contact {
+    background-color: var(--roxo);
+    border-radius: 10px;
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.contact h2 {
+    color: var(--verdeClaro);
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    margin-bottom: 30px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact input,
+.contact textarea {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact button {
+    background-color: var(--verdeClaro);
+    color: var(--roxo);
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.contact button:hover {
+    background-color: var(--verdeEscuro);
+}
+
+/* ---------------------- RODAPÉ ---------------------- */
+footer {
+    background-color: var(--verdeClaro);
+    padding: 20px;
+    text-align: center;
+    color: var(--roxo);
+}
+
+/* ---------------------- RESPONSIVIDADE ---------------------- */
+@media (max-width: 1024px) {
+    #cabecario {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    #texto-apresentacao {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .divisor-em-pe {
+        height: 8px;
+        width: 80px;
+        margin-bottom: 1rem;
+    }
+
+    .sobre-box {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .download-btn, #theme-toggle {
+        width: 80%;
+    }
+}
